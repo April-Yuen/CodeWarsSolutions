@@ -7,18 +7,14 @@
 // Example
 // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
 
+
 function countPositivesSumNegatives(input) {
-    let positive = []
-    let negative = 0
-    let newArray = []
-    for(let i = 0; i < input.length; i++){
-        if (input[i] > 0){
-            positive.push(input[i]);
-        }else if (input[i] <= 0){
-            negative += input[i]
-        }
+    let positiveNums = 0;
+    let negativeNums = 0;
+    if (input === null || input.length === 0) {
+      return [];
+    } else {
+      input.forEach((num) => num > 0 ? positiveNums++ : negativeNums += num);
     }
-    newArray.push(positive.length);
-    newArray.push(negative);
-    return newArray;
+    return [positiveNums , negativeNums];
 }
