@@ -48,7 +48,7 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
       if(newSharkTime < myTime){
           return "Shark Bait!"
       }else{
-          return "Alive"
+          return "Alive!"
       }
 }
 
