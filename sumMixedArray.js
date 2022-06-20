@@ -1,0 +1,10 @@
+// Sum Mixed Array
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+function sumMix(x){
+    let numArrays = []
+    x.forEach(num => numArrays.push(+num))
+    return numArrays.reduce((acc, c) => acc + c,0)
+  }
