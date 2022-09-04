@@ -17,7 +17,7 @@ function wave(str){
         if(str[i] === " "){
              continue
         }else{
-            wave.push(str.slice(0,i)+str[i].toUpperCase()+ str.slice(i+1))
+         wave.push(str.slice(0,i)+str[i].toUpperCase()+ str.slice(i+1))
         }
     }
     return wave
