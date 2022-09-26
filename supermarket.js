@@ -33,28 +33,15 @@
 //conditional for if the register is 1. 
 
 function queueTime(customers, n) {
-    let evenArr = []
-    let oddArr = []
-  if (n===1){
-      return customers.reduce((acc,cur)=> acc + cur, 0)
-  }else if (customers.length < n){
-      return Math.max(...customers)
-  }else if (customers.length > n){
-      for(let i = 0; i < customers.length; i++){
-          if(customers.indexOf(customers[i])% 2 ===0){
-              evenArr.push(customers[i])
-          }else{
-              oddArr.push(customers[i])
-          }
-      }
-      let evenTotal = evenArr.reduce((acc,cur)=> acc + cur,0)
-      let oddTotal = oddArr.reduce((acc,cur) => acc + cur,0)
-      if(evenTotal > oddTotal){
-          return evenTotal
-      }else {
-          return oddTotal
-      }
-  }
+    let newArr = []
+    for(let i =0; i < n; i++){
+        newArr[i] = 0
+    }
+    for(let i = 0; i < customers.length; i++){
+        newArr[0]+= customers[i]
+        newArr.sort((a,b) => a-b)
+    }
+    return newArr[newArr.length-1]
 }
 
 
