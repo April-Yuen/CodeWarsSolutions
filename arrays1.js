@@ -28,6 +28,7 @@ const arr4 = [['a','b','c'],['g','h','i'],['d','e','f']]
 // checkEquality(arr1, arr4) => false
 // etc.
 
+// This is a nested for loop. Make sure I return true outside of the loops. Otherwise, it will stop the loop and I will get the wrong result. 
 function checkEquality(arr1, arr3){
    for(let i = 0; i < arr1.length; i++){
     for(let j = 0; j < arr1[i].length; j++){
